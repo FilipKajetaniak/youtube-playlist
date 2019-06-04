@@ -1,0 +1,71 @@
+@import "./variables";
+
+.add-track {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  color: $darkergray;
+  cursor: pointer;
+  &:hover {
+    color: $main;
+  }
+}
+
+.add-track-input {
+  margin-top: 10px;
+  text-align: right;
+  ::-webkit-input-placeholder {
+    color: $darkergray;
+  }
+  ::-moz-placeholder {
+    color: $darkergray;
+  }
+  :-ms-input-placeholder {
+    color: $darkergray;
+  }
+  :-moz-placeholder {
+    color: $darkergray;
+  }
+  input[type="text"] {
+    width: 100%;
+    border: none;
+    padding: 16px;
+    outline: none;
+    border-radius: 300px;
+    // 13
+    background-color: white;
+    -webkit-box-shadow: 0px 6px 16px -3px rgba(0, 0, 0, 0.31);
+    -moz-box-shadow: 0px 6px 16px -3px rgba(0, 0, 0, 0.31);
+    box-shadow: 0px 6px 16px -3px rgba(0, 0, 0, 0.31);
+  }
+}
+
+.add-track-button,
+.cancel-track-button {
+  border: none;
+  margin: 15px 0 0 10px;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 0.9em;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.add-track-button {
+  background-color: $main;
+  color: white;
+  -webkit-box-shadow: 1px 1px 5px 0px lighten($main, 6);
+  -moz-box-shadow: 1px 1px 5px 0px lighten($main, 6);
+  box-shadow: 1px 1px 5px 0px lighten($main, 6);
+}
+
+.cancel-track-button {
+  background-color: $light;
+  color: $dark;
+  -webkit-box-shadow: 1px 1px 5px 0px $darkergray;
+  -moz-box-shadow: 1px 1px 5px 0px $darkergray;
+  box-shadow: 1px 1px 5px 0px $darkergray;
+}

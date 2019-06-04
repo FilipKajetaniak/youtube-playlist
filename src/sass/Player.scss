@@ -1,0 +1,30 @@
+@import "./variables";
+
+.player {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  border-radius: 30px;
+  background: white;
+  color: $dark;
+  font-size: 1.2em;
+  letter-spacing: 0.03em;
+  box-shadow: 2px 5px 14px 0px rgba(0, 0, 0, 0.31);
+}
+
+.player-container {
+  width: 100%;
+  position: relative;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+@media (max-width: 440px) {
+  .player-container {
+    padding: 15px;
+  }
+  .player {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

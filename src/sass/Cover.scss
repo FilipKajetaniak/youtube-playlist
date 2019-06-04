@@ -1,0 +1,119 @@
+@import "./variables";
+
+.cover {
+  margin: 10px 0 20px 0;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.current-cover {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: 250px;
+  width: 250px;
+  background: $gray;
+  background-position: center;
+  background-size: 180%;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  transition: all 200ms ease-in-out;
+  &::before {
+    content: "";
+    transition: all 200ms ease-in-out;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -15px;
+    left: 0;
+    opacity: 1;
+    background: inherit;
+    border-radius: inherit;
+    filter: blur(25px);
+  }
+}
+
+.prev-cover,
+.next-cover {
+  position: absolute;
+  top: 0;
+  height: 250px;
+  width: 250px;
+  transition: background-image 200ms ease-in-out;
+  background-color: $gray;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  transform: scale(0.8);
+  z-index: -2;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+    -webkit-box-shadow: 0px 0px 5px 1px $main;
+    -moz-box-shadow: 0px 0px 5px 1px $main;
+    box-shadow: 0px 0px 5px 1px $main;
+  }
+}
+
+.prev-cover {
+  left: 10px;
+}
+
+.next-cover {
+  right: 10px;
+}
+
+@media (max-width: 440px) {
+  .prev-cover {
+    left: -10px;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.6);
+  }
+
+  .next-cover {
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.6);
+    right: -10px;
+  }
+  .current-cover {
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    &.no-img {
+      opacity: 0.4;
+    }
+    &::before {
+      content: "";
+      display: none;
+    }
+  }
+}
+
+.loading-icon-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  line-height: 250px;
+  font-size: 30px;
+  fill: white;
+}
+
+.loading-icon {
+  animation-name: spinning;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

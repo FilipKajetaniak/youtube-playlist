@@ -1,0 +1,46 @@
+@import "./variables";
+
+.controls-container {
+  margin: 30px auto 20px auto;
+  width: 150px;
+  font-size: 1em;
+  fill: $gray;
+  font-size: 22px;
+  text-align: center;
+  clear: both;
+  svg {
+    cursor: pointer;
+    &:hover {
+      fill: $main;
+    }
+  }
+}
+.next-song-icon {
+  float: right;
+}
+.prev-song-icon {
+  float: left;
+}
+
+.play-icon {
+  margin-right: -3px;
+}
+
+.play-button {
+  display: inline;
+  fill: $main;
+  &:hover {
+    fill: $main2;
+  }
+}
+
+.icon-disabled {
+  svg {
+    fill: $light;
+    opacity: 0.6;
+    cursor: context-menu;
+    &:hover {
+      fill: $light;
+    }
+  }
+}
