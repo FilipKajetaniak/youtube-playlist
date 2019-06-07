@@ -1,3 +1,6 @@
+If you are not able to add track to playlist, consider generating new YouTube API key from Google Developer Console.
+YouTube only lets you make certain amount of API calls.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
